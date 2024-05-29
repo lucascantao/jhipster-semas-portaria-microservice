@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240529142442"
+  },
+  "applications": "*",
+  "clientRootFolder": "JhipsterSemasPortariasMicroservico",
+  "databaseType": "sql",
+  "entityTableName": "topicos",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "titulo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "JhipsterSemasPortariasMicroservico",
+  "name": "Topico",
+  "relationships": [
+    {
+      "otherEntityField": "titulo",
+      "otherEntityName": "ajuda",
+      "otherEntityRelationshipName": "topico",
+      "relationshipName": "ajuda",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "nome",
+      "otherEntityName": "assunto",
+      "otherEntityRelationshipName": "topico",
+      "relationshipName": "assunto",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

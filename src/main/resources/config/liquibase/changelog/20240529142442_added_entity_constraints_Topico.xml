@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Topico.
+    -->
+    <changeSet id="20240529142442-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="topicos_id"
+                                 baseTableName="rel_topicos__ajuda"
+                                 constraintName="fk_rel_topicos__ajuda__topicos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="topicos"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="ajuda_id"
+                                 baseTableName="rel_topicos__ajuda"
+                                 constraintName="fk_rel_topicos__ajuda__ajuda_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ajudas"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="topicos_id"
+                                 baseTableName="rel_topicos__assunto"
+                                 constraintName="fk_rel_topicos__assunto__topicos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="topicos"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="assunto_id"
+                                 baseTableName="rel_topicos__assunto"
+                                 constraintName="fk_rel_topicos__assunto__assunto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="assunto"
+                                 />
+    </changeSet>
+</databaseChangeLog>

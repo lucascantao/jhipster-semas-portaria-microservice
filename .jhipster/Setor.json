@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240529142446"
+  },
+  "applications": "*",
+  "clientRootFolder": "JhipsterSemasPortariasMicroservico",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "sigla",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deletedAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "microserviceName": "JhipsterSemasPortariasMicroservico",
+  "name": "Setor",
+  "relationships": [],
+  "searchEngine": "no"
+}

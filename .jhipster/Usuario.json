@@ -1,0 +1,53 @@
+{
+  "annotations": {
+    "changelogDate": "20240529142447"
+  },
+  "applications": "*",
+  "clientRootFolder": "JhipsterSemasPortariasMicroservico",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "login",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deletedAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "microserviceName": "JhipsterSemasPortariasMicroservico",
+  "name": "Usuario",
+  "relationships": [
+    {
+      "otherEntityField": "nome",
+      "otherEntityName": "perfil",
+      "relationshipName": "perfil",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "nome",
+      "otherEntityName": "setor",
+      "relationshipName": "setor",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

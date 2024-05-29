@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (topico()) {
+      <div>
+        <h2 data-cy="topicoDetailsHeading"><span>Topico</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>Id</span></dt>
+          <dd>
+            <span>{{ topico()!.id }}</span>
+          </dd>
+          <dt><span>Titulo</span></dt>
+          <dd>
+            <span>{{ topico()!.titulo }}</span>
+          </dd>
+          <dt><span>Ajuda</span></dt>
+          <dd>
+            @for (ajuda of topico()!.ajudas; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/jhipstersemasportariasmicroservico/ajuda', ajuda.id, 'view']">{{ ajuda?.titulo }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span>Assunto</span></dt>
+          <dd>
+            @for (assunto of topico()!.assuntos; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/jhipstersemasportariasmicroservico/assunto', assunto.id, 'view']">{{ assunto?.nome }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/jhipstersemasportariasmicroservico/topico', topico()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

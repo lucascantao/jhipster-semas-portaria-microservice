@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240529142443"
+  },
+  "applications": "*",
+  "clientRootFolder": "JhipsterSemasPortariasMicroservico",
+  "databaseType": "sql",
+  "entityTableName": "ajudas",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "titulo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "JhipsterSemasPortariasMicroservico",
+  "name": "Ajuda",
+  "relationships": [
+    {
+      "otherEntityField": "titulo",
+      "otherEntityName": "topico",
+      "otherEntityRelationshipName": "ajuda",
+      "relationshipName": "topico",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}
